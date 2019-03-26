@@ -161,7 +161,7 @@ namespace Pinger
             try
             {
                 string externalip = new WebClient() { Proxy = null }.DownloadString("http://icanhazip.com");
-                LogWrite(string.Format("{0:yyyy-MM-dd HH:mm:ss} - My Public IP: {1}", DateTime.Now, externalip));
+                LogWrite(string.Format("{0:yyyy-MM-dd HH:mm:ss} - My Public IP: {1}", DateTime.Now, externalip.Trim()));
             }
             catch (WebException e)
             {
